@@ -40,4 +40,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    //thu viện load image
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
+    //thu viện load dữ liệu API
+    implementation("com.android.volley:volley:1.2.1")
+    //thư viện circle images
+    //bo goc tron cho ImageView
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }

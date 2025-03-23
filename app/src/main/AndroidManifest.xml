@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,9 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ViDuHandler_AsyncTask_JSONAPI"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true"
+        >
+        <!--
+        .Vidu1Handler1Activity
+        .Vidu2Handler2Actitivy // Lazy load gì gì nè
+        .Vidu3AsyncTaskActivity
+
+        .Vidu4VolleyLoginActivity // Thầy tắt API hay sao á, nên không run đưc
+        .Vidu4VolleyProfileActivity
+         -->
         <activity
-            android:name=".MainActivity"
+            android:name=".Vidu3AsyncTaskActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" android:exported="false" />
     </application>
 
 </manifest>
